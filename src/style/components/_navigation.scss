@@ -1,0 +1,40 @@
+.navigation {
+  position: absolute;
+  top: 1rem;
+  left: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 28px;
+
+  .nav-active {
+    color: $orange;
+  }
+
+  ul:hover li:hover {
+    color: $orange;
+  }
+
+  .nav-portfolio {
+    display: flex;
+
+
+    &:hover .nav-projects,
+    .nav-projects:hover {
+
+      visibility: visible;
+
+    }
+
+    .nav-projects {
+      position: absolute;
+      visibility: hidden;
+      padding: 0 40px;
+      width: 200px;
+      transform: translateX(70px);
+      transition: .3s ;
+      perspective: 500px;
+      margin-left: 5px;
+      z-index: 5;
+    }
+  }
+}
